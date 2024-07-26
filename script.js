@@ -36,7 +36,6 @@ fetch("https://fakestoreapi.com/products")
             `;
         });
 
-        // Kart tıklama olayını ekle
         document.querySelectorAll(".view-details-btn").forEach(button => {
             button.addEventListener("click", (event) => {
                 let productId = event.target.getAttribute("data-id");
@@ -48,7 +47,6 @@ fetch("https://fakestoreapi.com/products")
     .catch((error) => {
         console.error('Error fetching data:', error);
     });
-
 
     function showModal(product) {
         document.getElementById("modal-image").src = product.image;
